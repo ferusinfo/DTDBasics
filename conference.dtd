@@ -1,0 +1,57 @@
+<!NOTATION GIF SYSTEM "image/gif">
+<!NOTATION JPG SYSTEM "image/jpeg">
+<!NOTATION PNG SYSTEM "image/png">
+
+<!ELEMENT conference (cname,date,location,sponsors,agenda,speakers)*>
+<!ATTLIST conference language CDATA #FIXED "EN">
+<!ELEMENT cname %PCD;>
+
+<!ELEMENT date (dstart,dend)?>
+<!ELEMENT dstart (day,month,year)*>
+<!ELEMENT day %PCD;>
+<!ELEMENT month %PCD;>
+<!ELEMENT year %PCD;>
+<!ELEMENT dend (day,month,year)*>
+
+<!ELEMENT location (venue)*>
+<!ELEMENT venue (address)*>
+
+<!ELEMENT address (place,district,city,street,gps)*>
+<!ELEMENT place %PCD;>
+<!ELEMENT district %PCD;>
+
+<!ELEMENT city %PCD;>
+<!ELEMENT street %PCD;>
+
+<!ELEMENT gps (latitude,longtitude)*>
+<!ELEMENT latitude %PCD;>
+<!ELEMENT longtitude %PCD;>
+
+<!ELEMENT sponsors (sponsor)+>
+<!ELEMENT sponsor %PCD;>
+<!ATTLIST sponsor type CDATA #REQUIRED>
+<!ATTLIST sponsor sid ID #REQUIRED>
+
+<!ELEMENT agenda (cday)*>
+<!ELEMENT cday (lecture | comingsoon)*>
+<!ATTLIST cday number (1|2) "1">
+
+<!ELEMENT lecture (tstart,tend,title)*>
+<!ATTLIST lecture speakerid IDREF #IMPLIED>
+<!ELEMENT tstart %PCD;>
+<!ELEMENT tend %PCD;>
+<!ELEMENT title %PCD;>
+<!ELEMENT comingsoon EMPTY>
+
+<!ELEMENT speakers (speaker)*>
+<!ELEMENT speaker ((name,photo?,twitter?) | comingsoon)*>
+<!ATTLIST speaker speakerid ID #REQUIRED>
+
+<!ELEMENT photo %PCD;>
+<!ATTLIST photo type NOTATION (GIF | JPG | PNG) #IMPLIED>
+
+<!ELEMENT name %PCD;>
+<!ATTLIST name sex NMTOKEN #REQUIRED>
+
+<!ELEMENT twitter (#PCDATA | emptytwitter)*>
+<!ELEMENT emptytwitter EMPTY>

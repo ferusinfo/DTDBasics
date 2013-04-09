@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="no" ?>
+
+<!DOCTYPE conference SYSTEM "conference.dtd" [
+	<!ENTITY officialTwitter "@mm_conf">
+	<!ENTITY conferenceName "Mobile Mobile Conference">
+	<!ENTITY TBA "To Be Announced">
+	<!ENTITY % PCD "(#PCDATA)*" >
+]>
+
+
+<conference language="EN">
+	<cname>&conferenceName;</cname>
+	<date>
+		<dstart>
+			<day>18</day>
+			<month>04</month>
+			<year>2013</year>
+		</dstart>
+		<dend>
+			<day>19</day>
+			<month>04</month>
+			<year>2013</year>
+		</dend>
+	</date>
+	<location>
+		<venue>
+			<address>
+				<place>Zabytkowa zajezdnia tramwajowa</place>
+				<district>Kazimierz</district>
+				<city>Krakow</city>
+				<street>Sw. Wawrzynca 15</street>
+				<gps>
+					<latitude>50.0498</latitude>
+					<longtitude>19.94715</longtitude>
+				</gps>
+			</address>
+		</venue>
+	</location>
+	<sponsors>
+		<sponsor type="Giant Zeppelin" sid="s01">hub:raum</sponsor>
+		<sponsor type="Rocket Fighter" sid="s02">MailChimp</sponsor>
+		<sponsor type="Videographer" sid="s03">Heroku</sponsor>
+		<sponsor type="Automobile Pilot" sid="s04">New Relic</sponsor>
+		<sponsor type="Music" sid="s05">Spotify</sponsor>
+	</sponsors>
+	<agenda>
+		<cday number="1">
+			<lecture speakerid="S1">
+				<tstart>09:45</tstart>
+				<tend>10:00</tend>
+				<title>Hello and Welcome</title>
+			</lecture>
+			<lecture speakerid="S2">
+				<tstart>10:00</tstart>
+				<tend>10:45</tend>
+				<title>Your idea sucks</title>
+			</lecture>
+			<lecture speakerid="S3">
+				<tstart>11:00</tstart>
+				<tend>11:45</tend>
+				<title>&TBA;</title>
+			</lecture>
+		</cday>
+		<cday number="2">
+			<comingsoon/>
+		</cday>
+	</agenda>
+	<speakers>
+		<speaker speakerid="S1">
+			<name sex="F">Ela Madej</name>
+			<twitter>&officialTwitter;</twitter>
+		</speaker>
+		<speaker speakerid="S2">
+			<name sex="M">Matteo Manferdini</name>
+			<twitter />
+		</speaker>
+		<speaker speakerid="S3">
+			<name sex="M">Brian Suda</name>
+			<photo type="GIF">/photos/brian.gif</photo>
+		</speaker>
+		<speaker speakerid="S4">
+			<comingsoon/>
+		</speaker>
+	</speakers>
+</conference>
